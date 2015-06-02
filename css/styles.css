@@ -1,3 +1,7 @@
 #show_account{
   display: none;
 }
+
+.change-balance-header{
+  display:none;
+}
