@@ -26,6 +26,12 @@ $( document ).ready(function() {
     var inputtedLastName = $("#last_name").val();
     var inputtedBalance = $("#balance").val();
     var newAccount = new bankAccount(inputtedFirstName + " " + inputtedLastName, inputtedBalance);
+    $("#account_list").append("<li class='account'>" + newAccount.holder + "</li>");
+    $(".account").last().click(function() {
+      $("#show_account").show();
+      $(".holder_name").text(newAccount.holder);
+      $(".account_balance").text(newAccount.balance);
+    });
 
 
   });
