@@ -12,10 +12,21 @@ bankAccount.prototype.withdraw = function(amount){
   this.balance -= amount
 };
 
+
 "use strict";
 
 
 //jQuery
 $( document ).ready(function() {
 
+  $("#create_account").submit(function(event){
+    event.preventDefault();
+
+    var inputtedFirstName = $("#first_name").val();
+    var inputtedLastName = $("#last_name").val();
+    var inputtedBalance = $("#balance").val();
+    var newAccount = new bankAccount(inputtedFirstName + " " + inputtedLastName, inputtedBalance);
+
+
+  });
 });
